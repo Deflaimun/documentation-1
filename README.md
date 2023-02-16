@@ -32,6 +32,8 @@ Docusaurus supports single-sourcing with markdown files that are importable in o
 
 In Redpanda documentation, save partials in a `shared` folder, at the root of the directory that shares the same context. If the partial doc can be used in more contexts, go up on level in the file tree. For example, the `docs/deploy/kubernetes/shared` folder contains partials with k8s content that's imported by docs in `docs/deploy/kubernetes`; general partials are stored at `docs/shared` and used throughout the project.
 
+Partials can be imported into other partials.
+
 Example:
 
 File `docs/deploy/shared/_markdown-partial-example.mdx`:
@@ -57,7 +59,7 @@ Hello Redpanda Docs
 This is text some content from _markdown-partial-example.md.
 ```
 
-## Limitations :warning:
+### Limitations :warning:
 
 - **Headings**. Currently Docusaurus has a limitation in which the table of contents (the right navigation pane) doesn't import headings in partials. See its [Docusaurus open issue](https://github.com/facebook/docusaurus/issues/3915). There's no know workaround.
 
@@ -67,5 +69,10 @@ This is text some content from _markdown-partial-example.md.
  
 Examples of partials in Redpanda documentation:
 
-- [docs/get-started/shared/_rpk-version.mdx](https://github.com/redpanda-data/documentation/blob/dev/docs/get-started/shared/_rpk-version.mdx)
-- [docs/manage/kubernetes/shared/_values-yaml.mdx](https://github.com/redpanda-data/documentation/blob/dev/docs/manage/kubernetes/shared/_values-yaml.mdx)
+- Partial: [docs/get-started/shared/_rpk-version.mdx](https://github.com/redpanda-data/documentation/blob/dev/docs/get-started/shared/_rpk-version.mdx)
+
+Imported: [docs/get-started/shared/_install-rpk-homebrew.mdx](https://github.com/redpanda-data/documentation/blob/dev/docs/get-started/shared/_install-rpk-homebrew.mdx)
+
+- Partial: [docs/manage/kubernetes/shared/_values-yaml.mdx](https://github.com/redpanda-data/documentation/blob/dev/docs/manage/kubernetes/shared/_values-yaml.mdx)
+
+Imported: [docs/manage/kubernetes/configure-storage.mdx](https://github.com/redpanda-data/documentation/blob/dev/docs/manage/kubernetes/configure-storage.mdx)
