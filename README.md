@@ -32,7 +32,7 @@ Docusaurus supports single-sourcing with markdown files that are importable in o
 
 Example:
 
-File `docs/shared/_markdown-partial-example.mdx`:
+File `docs/deploy/shared/_markdown-partial-example.mdx`:
 
 ```javascript
 <span>Hello {props.name}</span>
@@ -44,7 +44,7 @@ The file that imports it must follow this syntax:
 File `docs/deploy/use-example.mdx`:
 
 ```javascript
-import PartialExample from './_markdown-partial-example.mdx';
+import PartialExample from './shared/_markdown-partial-example.mdx';
 <PartialExample name="Redpanda Docs" />
 ```
 
