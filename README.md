@@ -69,10 +69,14 @@ This is text some content from _markdown-partial-example.md.
  
 Examples of partials in Redpanda documentation:
 
-- Partial: [docs/get-started/shared/_rpk-version.mdx](https://github.com/redpanda-data/documentation/blob/dev/docs/get-started/shared/_rpk-version.mdx)
+- rpk version
 
-Imported: [docs/get-started/shared/_install-rpk-homebrew.mdx](https://github.com/redpanda-data/documentation/blob/dev/docs/get-started/shared/_install-rpk-homebrew.mdx)
+    Partial: [docs/get-started/shared/_rpk-version.mdx](https://github.com/redpanda-data/documentation/blob/dev/docs/get-started/shared/_rpk-version.mdx)
 
-- Partial: [docs/manage/kubernetes/shared/_values-yaml.mdx](https://github.com/redpanda-data/documentation/blob/dev/docs/manage/kubernetes/shared/_values-yaml.mdx)
+    Imported: [docs/get-started/shared/_install-rpk-homebrew.mdx](https://github.com/redpanda-data/documentation/blob/dev/docs/get-started/shared/_install-rpk-homebrew.mdx)
 
-Imported: [docs/manage/kubernetes/configure-storage.mdx](https://github.com/redpanda-data/documentation/blob/dev/docs/manage/kubernetes/configure-storage.mdx)
+- yaml value
+ 
+    Partial: [docs/manage/kubernetes/shared/_values-yaml.mdx](https://github.com/redpanda-data/documentation/blob/dev/docs/manage/kubernetes/shared/_values-yaml.mdx)
+
+    Imported: [docs/manage/kubernetes/configure-storage.mdx](https://github.com/redpanda-data/documentation/blob/dev/docs/manage/kubernetes/configure-storage.mdx)
