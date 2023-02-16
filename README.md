@@ -30,6 +30,8 @@ Practice the DRY (Don't Repeat Yourself) principle by single-sourcing repeated c
 
 Docusaurus supports single-sourcing with markdown files that are importable in other files. While any page can be imported into any other page, its conventional that imported pages begin with an underscore `_`. Docusaurus calls those files **partials**. The markdown content in a partial is rendered in a file that imports it. See [Docusaurus partial docs](https://docusaurus.io/docs/markdown-features/react#importing-markdown) for more info.
 
+In Redpanda documentation, save partials in a `shared` folder, at the root of the directory that shares the same context. If the partial doc can be used in more contexts, go up on level in the file tree. For example, the `docs/deploy/kubernetes/shared` folder contains partials with k8s content that's imported by docs in `docs/deploy/kubernetes`; general partials are stored at `docs/shared` and used throughout the project.
+
 Example:
 
 File `docs/deploy/shared/_markdown-partial-example.mdx`:
@@ -48,20 +50,18 @@ import PartialExample from './shared/_markdown-partial-example.mdx';
 <PartialExample name="Redpanda Docs" />
 ```
 
-The output of the file `docs/deploy/use-example.mdx` will be:
+The HTML output of the file `docs/deploy/use-example.mdx` will be:
 
 ```
 Hello Redpanda Docs
 This is text some content from _markdown-partial-example.md.
 ```
 
-In Redpanda documentation, save partials in a `shared` folder, with `shared` at the root of the directory that shares the same context. If the partial doc can be used in more contexts, go up on level in the file tree. For example, the `docs/deploy/kubernetes/shared` folder contains partials with k8s content that's imported by docs in `docs/deploy/kubernetes`; general partials are stored at `docs/shared` and used throughout the project.
-
 ## Limitations :warning:
 
-- **Headings**. Currently Docusaurus has a limitation in which the table of contents(the right navigation pane) doesn't display headings in partials. See its [Docusaurus open issue](https://github.com/facebook/docusaurus/issues/3915). There's no know workaround.
+- **Headings**. Currently Docusaurus has a limitation in which the table of contents (the right navigation pane) doesn't import headings in partials. See its [Docusaurus open issue](https://github.com/facebook/docusaurus/issues/3915). There's no know workaround.
 
-- **Relative links**. Relative links in partials will only work where they were created. For example, if your partial is saved in `docs/folderA/shared/_partial` and you want import it from `docs/folderB/folderC/my-file`, the relative link won't work, because the relative location is different. :bulb: Workaround: Use absolute links or use links as variables.
+- **Relative links**. Relative links still follows the file tree where they were created. The partials feature doesn't change the link destination. For example, if your partial is saved in `docs/folderA/shared/_partial` and you want import it from `docs/folderB/folderC/my-file`, the relative link won't work, because the relative location is physically different. :bulb: Workaround: Use absolute links or use links as variables.
  
 Examples of partials in Redpanda documentation:
 
