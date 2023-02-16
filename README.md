@@ -61,7 +61,8 @@ This is text some content from _markdown-partial-example.md.
 
 - **Headings**. Currently Docusaurus has a limitation in which the table of contents (the right navigation pane) doesn't import headings in partials. See its [Docusaurus open issue](https://github.com/facebook/docusaurus/issues/3915). There's no know workaround.
 
-- **Relative links**. Relative links still follows the file tree where they were created. The partials feature doesn't change the link destination. For example, if your partial is saved in `docs/folderA/shared/_partial` and you want import it from `docs/folderB/folderC/my-file`, the relative link won't work, because the relative location is physically different. :bulb: Workaround: Use absolute links or use links as variables.
+- **Relative links**. Relative links still follows the file tree where they were created. The partials feature doesn't change the link destination. For example, if your partial is saved in `docs/folderA/shared/_partial` and you want import it from `docs/folderB/folderC/my-file`, the relative link won't work, because the relative location is physically different. 
+    :bulb: Workaround: Use absolute links or use links as variables.
  
 Examples of partials in Redpanda documentation:
 
