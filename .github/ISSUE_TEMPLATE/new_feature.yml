@@ -1,0 +1,40 @@
+name: 🚀 New feature
+description: Provide the necessary information for a new feature to be documented.
+labels: [New feature]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This template is strictly used internally by Redpanda. If a documentation needs additional clarification or you're reporting a bug, consider using Documentation Request.
+  - type: textarea
+    attributes:
+      label: Feature Description
+      description: Describe the new feature. Who is the audience for this update? For example, cluster admins, or developers? Do you know the context in which users will likely search for this content? 
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: New feature additional info
+      description: Provide material that will help the writer draft the new or updated content. If an issue only includes the name of a feature and release, it will be marked “More Info Needed” or “Blocked”.
+      placeholder: |
+        1. Links to internal wikis, PRDs, design docs, KIPs, training material, or slide decks. 
+        2. Links to engineering PRs that implement the update. 
+        3. Links to blog posts, if applicable. 
+        4. Identify specific Slack channels that the writer can join to get more details about the feature. 
+        5. Links to Slack conversations (RP and RP Community) about the issue. 
+        6. Names of SMEs who can answer questions and act as reviewers (at least one engineer and one PM). 
+        7. Any additional information that will be of use to the writer.
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Which release is it included or expected?
+      placeholder: For example v22.1, v23.2.
+  - type: markdown
+    attributes:
+      value: |
+        Documentation Issues must be distinct and not overlap. 
+
+        If filing an Issue for a feature that spans platform and cloud, you must file two separate Issues. 
+
+        Each Issue will drive the new content in GitHub for the respective platform or cloud doc. 

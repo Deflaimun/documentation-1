@@ -1,0 +1,29 @@
+name: 📚 Documentation request
+description: Suggest a documentation change to Redpanda.
+labels: [Customer feedback]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This template is strictly used by customer requests. If you need to fill a new feature, consider using New Feature.
+  - type: textarea
+    attributes:
+      label: Issue Description
+      description: What feature do you need to be documented? Is this a gap in the documentation or do you need clarification?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Updates to existing documentation
+      description: If applicable, provide the URL of the page(s) to which the updates apply.
+  - type: checkboxes
+    id: terms
+    attributes:
+        label: Have you reached to Redpanda Community Slack? 
+        description: You can reach us directly at [Redpanda Community Slack](https://rpnda.co/slack)
+        options:
+          - label: "Yes"
+  - type: textarea
+    attributes:
+      label: Link to Redpanda Community Slack conversation
+      description: If applicable, provide the link to the Redpanda Community Slack conversation.
